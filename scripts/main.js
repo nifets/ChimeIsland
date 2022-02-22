@@ -39,6 +39,8 @@ function load_resources() {
 function main() {
     // Get reference to canvas
     const canvas = document.querySelector("#glCanvas");
+    canvas.width  = window.innerWidth;
+    canvas.height = window.innerHeight;
 
     // Initialize the GL context
     const gl = WebGLDebugUtils.makeDebugContext(canvas.getContext("webgl2", {antialias: false}));
