@@ -1,3 +1,4 @@
+
 function loadShader(gl, type, source) {
     const shader = gl.createShader(type);
 
@@ -56,4 +57,3 @@ class Program {
         }
     }
 }
-

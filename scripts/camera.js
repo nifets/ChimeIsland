@@ -19,13 +19,10 @@ class Camera {
                 fov, aspect, zNear, zFar) {
         this.sensitivity = sensitivity;
         this.speed = speed;
-        this.projectionMatrix = mat4.create();
-        mat4.perspective(this.projectionMatrix,
-                         fov,
-                         aspect,
-                         zNear,
-                         zFar);
-
+        this.fov = fov;
+        this.aspect = aspect;
+        this.zNear = zNear;
+        this.zFar = zFar;
         // Input Handling
 
         //Camera movement
@@ -54,6 +51,16 @@ class Camera {
         // Yaw according to cursor position
         mat4.rotate(mat, mat, radians(this.yawAngle), DOWN_VEC);
 
+        return mat;
+    }
+
+    projectionMatrix() {
+        const mat = mat4.create();
+        mat4.perspective(mat,
+                         this.fov,
+                         this.aspect,
+                         this.zNear,
+                         this.zFar);
         return mat;
     }
 
@@ -90,6 +97,7 @@ class Camera {
             this.currDist = 30.0;
         if (this.currDist < 0.7)
             this.currDist = 0.7;
+        fov += amount;
     }
 
 

@@ -35,6 +35,7 @@ function load_resources() {
 }
 
 
+
 function main() {
     // Get reference to canvas
     const canvas = document.querySelector("#glCanvas");
@@ -239,7 +240,6 @@ function draw_scene(gl, canvas, res) {
 
     // Rendering Loop
     function render(now) {
-
         normalProgram.use(gl);
         // render to our targetTexture by binding the framebuffer
         gl.bindFramebuffer(gl.FRAMEBUFFER, normalFrameBuffer);
@@ -251,7 +251,7 @@ function draw_scene(gl, canvas, res) {
 
         // Specify projection matrix value in shader program
         gl.uniformMatrix4fv(normalProgram.uniformLoc["projectionMatrix"],
-                            false, camera.projectionMatrix);
+                            false, camera.projectionMatrix());
 
         // Update view matrix
         gl.uniformMatrix4fv(normalProgram.uniformLoc["viewMatrix"],
@@ -276,7 +276,7 @@ function draw_scene(gl, canvas, res) {
 
         // Specify projection matrix value in shader program
         gl.uniformMatrix4fv(celProgram.uniformLoc["projectionMatrix"],
-                            false, camera.projectionMatrix);
+                            false, camera.projectionMatrix());
 
         // Update view matrix
         gl.uniformMatrix4fv(celProgram.uniformLoc["viewMatrix"],
