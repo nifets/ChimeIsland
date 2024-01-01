@@ -161,7 +161,7 @@ function draw_scene(gl, canvas, res) {
       gl,
       res["chimeClothesSrc"],
       new Material(
-        vec3.fromValues(0.09, 0.06, 0.06),
+        vec3.fromValues(0.09, 0.06, 0.16),
         vec3.fromValues(0.22, 0.18, 0.14),
         vec3.fromValues(0.2, 0.2, 0.2),
         6.2,
@@ -172,7 +172,7 @@ function draw_scene(gl, canvas, res) {
       gl,
       res["chimeFaceSrc"],
       new Material(
-        vec3.fromValues(0.1, 0.18, 0.17),
+        vec3.fromValues(0.1, 0.18, 0.21),
         vec3.fromValues(0.4, 0.75, 0.69),
         vec3.fromValues(0.29, 0.5, 0.5),
         10.0,
@@ -205,7 +205,7 @@ function draw_scene(gl, canvas, res) {
       gl,
       res["chimeLanturnsSrc"],
       new Material(
-        vec3.fromValues(1.0, 1.0, 0.8),
+        vec3.fromValues(1.0, 1.0, 0.9),
         vec3.fromValues(0.0, 0.0, 0.0),
         vec3.fromValues(0.01, 0.01, 0.01),
         0.0,
@@ -224,7 +224,7 @@ function draw_scene(gl, canvas, res) {
       gl,
       res["islandRocksSrc"],
       new Material(
-        vec3.fromValues(0.05, 0.04, 0.06),
+        vec3.fromValues(0.08, 0.06, 0.19),
         vec3.fromValues(0.42, 0.39, 0.39),
         vec3.fromValues(0.13, 0.12, 0.14),
         18.0,
@@ -235,8 +235,8 @@ function draw_scene(gl, canvas, res) {
       gl,
       res["islandCrystalsSrc"],
       new Material(
-        vec3.fromValues(0.17, 0.02, 0.17),
-        vec3.fromValues(0.7, 0.07, 0.58),
+        vec3.fromValues(0.17, 0.02, 0.23),
+        vec3.fromValues(0.7, 0.07, 0.8),
         vec3.fromValues(0.8, 0.8, 0.6),
         40.0,
         10.0
@@ -399,7 +399,7 @@ function draw_scene(gl, canvas, res) {
 
     // Clear buffer
     gl.enable(gl.DEPTH_TEST);
-    gl.clearColor(0.152, 0.07, 0.26, 1.0);
+    gl.clearColor(0.159, 0.09, 0.32, 1.0);
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 
     // Specify projection matrix value in shader program
