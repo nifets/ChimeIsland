@@ -399,7 +399,7 @@ function draw_scene(gl, canvas, res) {
 
     // Clear buffer
     gl.enable(gl.DEPTH_TEST);
-    gl.clearColor(0.159, 0.09, 0.32, 1.0);
+    gl.clearColor(0.3, 0.2, 0.6, 1.0);
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 
     // Specify projection matrix value in shader program
